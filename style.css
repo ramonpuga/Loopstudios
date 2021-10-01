@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+}
+.logo {
+    position: relative;
+}
+.logo img {
+    width: 80%;
+}
+.menu {
+    display: none;
+    position: relative;
+    justify-content: space-around;
+    height: 24px;
+}
+.menu a {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    color: #FFF;
+    padding: 3px 10px;
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    position: absolute;
+    justify-content: space-around;
+    right: 0px;
+    background-color: transparent;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+}
+.menu-mobile a {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    padding: 10px 32px;
+    color: transparent;
+    transition: all 1s ease-in-out;
+}
+.showmenu {
+    z-index: 1;
+}
+.showmenu .item {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+}
+
+.icon-bars {
+    display: flex;
+    position: relative;
+    height: 18px;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/mobile/image-hero.jpg) top left no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+.caption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    width: 80vw;
+    height: 35vh;
+    color: #FFF;
+    max-width: 400px;
+    border: 1px solid #FFF;
+}
+.caption h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 38px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+.container {
+    padding: 0 15px;
+}
+section {
+    padding: 15px 0;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+figure {
+    width: 100%;
+    margin-bottom: 30px;
+}
+figure img {
+    width: 100%;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+article h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 32px;
+}
+article p {
+    position: relative;
+    top: 20px;
+    font-family: 'Alata', sans-serif;
+    line-height: 28px;
+    color: hsl(0, 0%, 55%);
+}
+.container aside {
+    display: flex;
+    flex-direction: column;
+}
+.creations .creation {
+    width: 100%;
+    margin: 15px 0;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.creations .creation:hover {
+    opacity: 0.4;
+}
+.creations .creation h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    position: relative;
+    left: 20px;
+    color: #FFF;
+}
+.one {
+    background: url(images/mobile/image-deep-earth.jpg) center bottom no-repeat;
+}
+.two {
+    background: url(images/mobile/image-night-arcade.jpg) center bottom no-repeat;
+}
+.three {
+    background: url(images/mobile/image-soccer-team.jpg) center bottom no-repeat;
+}
+.four {
+    background: url(images/mobile/image-grid.jpg) center bottom no-repeat;
+}
+.five {
+    background: url(images/mobile/image-from-above.jpg) center bottom no-repeat;
+}
+.six {
+    background: url(images/mobile/image-pocket-borealis.jpg) center bottom no-repeat;
+}
+.seven {
+    background: url(images/mobile/image-curiosity.jpg) center bottom no-repeat;
+}
+.eight {
+    background: url(images/mobile/image-fisheye.jpg) center bottom no-repeat;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight {
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+.seeall {
+    border: 1px solid #000;
+    color: #000;
+    background: transparent;
+    padding: 15px 50px;
+    margin: 20px auto 60px;
+    display: block;
+    letter-spacing: 5px;
+    font-weight: 600;
+    font-family: 'Alata', sans-serif;
+    cursor: pointer;
+}
+.seeall:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+footer {
+    background-color: #000;
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first .logo {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 30px 0;
+}
+.first .logo img {
+    width: 80%;
+}
+.first .menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+.first .menu-footer a {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 6px;
+    color: #FFF;
+    transition: all 0.5s ease-in-out;
+}
+.first .menu-footer a:hover {
+    text-decoration: underline;
+}
+.secont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+.secont .social {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+}
+.secont .social a {
+    padding: 10px;
+}
+.secont p {
+    font-family: 'Alata', sans-serif;
+    line-height: 28px;
+    color: hsl(0, 0%, 55%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:375px) {
+    .about {
+        padding-top: 100px;
+    }
+}
+@media (min-width:768px) {
+    .caption {
+        position: relative;
+        right: 6vw;
+    }
+    .menu-mobile {
+        right: 12vw;
+    }
+}
+@media (min-width:1024px) {
+    .logo {
+        padding-right: 38px;
+    }
+    .menu {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+    }
+    .menu-mobile {
+        display: none;
+    }
+    .icon-bars {
+        display: none;
+    }
+    .banner {
+        background: url(images/desktop/image-hero.jpg) center bottom no-repeat;
+        background-size: cover;
+    }
+    .caption {
+        position: relative;
+        right: 20vw;
+    }
+    .about {
+        padding-top: 0;
+        min-height: 120vh;
+    }
+    .about .container {
+        display: flex;
+    }
+    .about article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: start;
+        width: 37vw;
+        position: absolute;
+        background: #FFF;
+        padding: 70px 50px 100px 70px;
+        right: 30;
+        top: 152vh;
+    }
+    figure {
+        width: 50%;
+        padding-top: 100px;
+        padding-left: 120px;
+        position: absolute;
+        left: 0;
+    }
+    .creations .container {
+        padding-bottom: 100px;
+    }
+    .container aside {
+        display: flex;
+        flex-direction: row;
+        padding: 0 100px;
+    }
+    .creations article {
+        align-items: start;
+        justify-content: center;
+        width: 30%;
+        padding: 40px 100px 40px 105px;
+    }
+    article p {
+        width: 30vw;
+    }
+    .seeall {
+        display: flex;
+        position: absolute;
+        margin: 20px 125px 60px;
+        right: 0;
+        top: 233vh;
+    }
+    .creations .creation {
+        height: 50vh;
+        margin: 10px;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+    .one {
+        background: url(images/desktop/image-deep-earth.jpg) center center;
+        background-size: cover;
+    }
+    .two {
+        background: url(images/desktop/image-night-arcade.jpg) center center;
+        background-size: cover;
+    }
+    .three {
+        background: url(images/desktop/image-soccer-team.jpg) center center;
+        background-size: cover;
+    }
+    .four {
+        background: url(images/desktop/image-grid.jpg) center center;
+        background-size: cover;
+    }
+    .five {
+        background: url(images/desktop/image-from-above.jpg) center center;
+        background-size: cover;
+    }
+    .six {
+        background: url(images/desktop/image-pocket-borealis.jpg) center center;
+        background-size: cover;
+    }
+    .seven {
+        background: url(images/desktop/image-curiosity.jpg) center  center;
+        background-size: cover;
+    }
+    .eight {
+        background: url(images/desktop/image-fisheye.jpg) center  center;
+        background-size: cover;
+    }
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .first {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-left: 100px;
+    }
+    .first .logo {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .first .logo img {
+        width: 85%;
+    }
+    .first .menu-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        top: 0;
+    }
+    .first .menu-footer a {
+        padding: 5px 15px;
+    }
+    footer .secont {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-right: 100px;
+    }
+}
+@media (min-width:1440px) {
+    .caption {
+        position: relative;
+        right: 21vw;
+    }
+    .about article {
+        padding: 100px 50px 100px 100px;
+        right: 30px;
+    }
+}
